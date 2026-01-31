@@ -1,4 +1,4 @@
-name: 'Execução manual'
+name: 'Execução manual – Cypress'
 
 on:
   workflow_dispatch:
