@@ -1,21 +1,14 @@
-# CI de Nível 01 - Disparo manual a partir de 1 clique
-
-#nome que vai aparecer la nass opções da pipe
 name: 'Execução manual'
-
-#triggersss OU gatilho de execução
-#gatilho de execução manual = workflow_dispatch
 
 on:
   workflow_dispatch:
 
 jobs:
-  # descrição do job
+
   e2e-tests:
-    # máquina que o job vai executar
+  
     runs-on: ['ubuntu-latest']
 
-    # passo a passso das ações do job
     steps:
       - uses: actions/checkout@v4
 
@@ -26,10 +19,10 @@ jobs:
         run: yarn
 
       - name: Testes E2E
-        run:  yarn cypress run
+        run:  yarn cypress run --browser chrome
 
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: relatorio-de-testess
+          name: relatorio-de-testes
           path: ./cypress/reports
