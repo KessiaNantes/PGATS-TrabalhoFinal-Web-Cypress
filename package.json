@@ -1,0 +1,18 @@
+{
+  "name": "projeto-trabalhofinal-automacao-web",
+  "version": "1.0.0",
+  "description": "Projeto trabalho final da disciplina de automação web da pgats usando Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn cypress run --browser chrome",
+    "report": "powershell -Command \"Start-Process 'C:\\PosGraduacao\\PGATS-TrabalhoFinal-Web\\cypress\\reports\\html\\index.html'\""
+  },
+  "keywords": [],
+  "author": "Kessia Alves",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.7.3",
+    "@faker-js/faker": "^8.4.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  } 
+}
